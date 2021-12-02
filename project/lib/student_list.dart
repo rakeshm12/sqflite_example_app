@@ -36,6 +36,10 @@ Future<void> deleteStudent(int? id) async {
   getAllStudents();
 }
 
+void closeDatabase() {
+  _db.close();
+}
+
 Future updateData(BuildContext context, id) async {
   studentList.notifyListeners();
   return showDialog(
